@@ -1,6 +1,9 @@
 Blog::Application.routes.draw do
-#  get "/home" => "pages#home"
-  root "pages#home" 
+  root "pages#home"
+  
+  get "/blog_posts" => "blog_posts#index"
+  get "/blog_posts/new" => "blog_posts#new"
+  post "/blog_posts" => "blog_posts#create"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

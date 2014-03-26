@@ -1,0 +1,11 @@
+<h2>New Article</h2>
+
+<%= params[:title] %>
+
+<%= form_tag("/blog_posts", method: "post") do %>
+  <p><input type="text" placeholder="Title" name="blog_post[title]" /></p>
+  
+  <p><textarea name="blog_post[content]"></textarea></p>
+  
+  <p><input type="submit" value="Create Article" /></p>
+<% end %>
