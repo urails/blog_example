@@ -1,0 +1,17 @@
+<%= link_to "Back to Blog Posts", blog_posts_path %>
+
+<% if flash[:success] %>
+  <div class="alert alert-success"><%= flash[:success] %></div>
+<% end %>
+
+<h3><%= @blog_post.title %></h3>
+<p>
+  <%= @blog_post.content %>
+</p>
+<p>
+  <%= link_to "Edit", edit_blog_post_path(@blog_post) %>
+  <%= link_to "Delete", blog_post_path(@blog_post), {
+    method: :delete, 
+    confirm: "Are you sure?"
+  } %>
+</p>

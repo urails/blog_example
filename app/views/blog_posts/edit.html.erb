@@ -1,0 +1,9 @@
+<h2>Edit Article</h2>
+
+<%= link_to "Back to Blog Posts", blog_posts_path %>
+
+<%= form_for(@blog_post) do |f| %>
+<p><%= f.text_field :title %></p>
+<p><%= f.text_area :content %></p>
+<p><%= f.submit "Update Article" %></p>
+<% end %>
