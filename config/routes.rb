@@ -8,6 +8,15 @@ Blog::Application.routes.draw do
   
   resources :blog_posts
   
+  get "/login" => "sessions#login"
+  post "/login" => "sessions#create_session"
+  
+  get "/signup" => "sessions#signup"
+  
+  post "/signup" => "sessions#create_user"
+  
+  get "/logout" => "sessions#destroy_session"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
